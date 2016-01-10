@@ -1,0 +1,93 @@
+/*Styles for body Element*/
+body{
+	font-family: Verdana,Arial,sans-serif;
+	background-color: #0b3b46;
+	font-size: 11.5px;
+}
+
+/*Styles for page ID*/
+#page{
+	
+	width: 940px;
+	margin: auto;
+	position: relative;
+}
+
+/*Styles for thank you Page*/
+#thankYou{
+	text-align: center;
+	padding-top: 2em;
+	height: 10em;
+	font-style: none;
+}
+
+/*Styles for the footer Element*/
+#footer{
+	text-align: center;
+	font-size: .85em;
+}
+
+/*Styles for the h1 Element*/
+h1{
+	text-align: center;
+	font-family: Decorative;
+}
+
+/*Styles for formRadLbl, formRad Classes*/
+.formRadLbl{
+	font-size: 90%;
+    float: left;
+    width: 4em;
+    text-align: right;
+}
+
+.formRad{
+	margin-left: 0.5em;
+	width: 1em;
+}
+
+/*Styles for label, input, textarea Elements*/
+label{
+	font-size: 90%;
+	padding-left: 5em;
+}
+
+input{
+	margin-left: 4.5em;
+	width: 25em;
+}
+
+textarea{
+	margin-left: 4.5em;
+	width: 40em;
+}
+
+/*Styles for state ID.  Attached to a select control holding state values*/
+select{
+	margin-left: 4.5em;
+}
+
+/*Styles for formSubmit ID*/
+#formSubmit{
+	margin-top: 1.5em;
+	margin-left: 6.5em;
+	width: 12.5em;
+}
+
+div.error {
+	font-size: 90%;
+	margin-left: 5em;
+    color: #cd0a0a;
+}
+
+.next{
+	margin-top: 2em;
+	margin-left: 4.5em;
+	width: 6em;
+}
+
+.back{
+	margin-top: 2em;
+	margin-left: 4.5em;
+	width: 6em;
+}

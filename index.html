@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Employment Application</title>
+	<link href="css/custom-theme/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script src="js/inputmask.js"></script>
+	<script src="scripts/main.js"></script>
+</head>
+<body>
+	<div id="page">
+		<div id="content">
+			<div class="ui-widget-header ui-corner-all">
+				<h1>Employment Application Form</h1>
+			</div>
+			<form id="appForm" name="appForm" action="pages/thanks.html" method="GET">
+				<div id="tabs">
+					<ul>
+						<li><a href="#piTab" id="piTabNav">Applicant Information</a></li>
+						<li><a href="#qTab" id="qTabNav">Applicant Qualifications</a></li>
+						<li><a href="#dsTab" id="dsTabNav">Disclaimer/Signature</a></li>
+					</ul>
+					<div id="piTab">
+						<div id="piAccordion" class="accordionGroup">
+							<h3 id="personalDiv">Contact Information</h3>
+							<div id="personal">
+								<label>First Name:</label></br>
+								<input id="fName" name="fName" type="text" /></br>
+								<label>Last Name:</label></br>
+								<input id="lName" name="lName" type="text" /></br>
+								<label>Middle Initial:</label></br>
+								<input id="mName" name="mName" type="text" /></br>
+								<label>Social Security Number:</label></br>
+								<input id="SSN" name="SSN" type="text" /></br>
+								<label>Street Address:</label></br>
+								<input id="address" name="address" type="text" /></br>
+								<label>Apartment/Unit:</label></br>
+								<input id="unit" name="unit" type="text" /></br>
+								<label>City:</label></br>
+								<input id="city" name="city" type="text" /></br>
+								<label>State:</label></br>
+								<select id="state" name="state">
+									  <option value="AL">Alabama</option>
+									  <option value="AK">Alaska</option>
+									  <option value="AZ">Arizona</option>
+									  <option value="AR">Arkansas</option>
+									  <option value="CA">California</option>
+									  <option value="CO">Colorado</option>
+									  <option value="CT">Connecticut</option>
+									  <option value="DE">Delaware</option>
+									  <option value="DC">District of Columbia</option>
+									  <option value="FL">Florida</option>
+									  <option value="GA">Georgia</option>
+									  <option value="HI">Hawaii</option>
+									  <option value="ID">Idaho</option>
+									  <option value="IL">Illinois</option>
+									  <option value="IN">Indiana</option>
+									  <option value="IA" selected="selected">Iowa</option>
+									  <option value="KS">Kansas</option>
+									  <option value="KY">Kentucky</option>
+									  <option value="LA">Louisiana</option>
+									  <option value="ME">Maine</option>
+									  <option value="MD">Maryland</option>
+									  <option value="MA">Massachusetts</option>
+									  <option value="MI">Michigan</option>
+									  <option value="MN">Minnesota</option>
+									  <option value="MS">Mississippi</option>
+									  <option value="MO">Missouri</option>
+									  <option value="MT">Montana</option>
+									  <option value="NE">Nebraska</option>
+									  <option value="NV">Nevada</option>
+									  <option value="NH">New Hampshire</option>
+									  <option value="NJ">New Jersey</option>
+									  <option value="NM">New Mexico</option>
+									  <option value="NY">New York</option>
+									  <option value="NC">North Carolina</option>
+									  <option value="ND">North Dakota</option>
+									  <option value="OH">Ohio</option>
+									  <option value="OK">Oklahoma</option>
+									  <option value="OR">Oregon</option>
+									  <option value="PA">Pennsylvania</option>
+									  <option value="RI">Rhode Island</option>
+									  <option value="SC">South Carolina</option>
+									  <option value="SD">South Dakota</option>
+									  <option value="TN">Tennessee</option>
+									  <option value="TX">Texas</option>
+									  <option value="UT">Utah</option>
+									  <option value="VT">Vermont</option>
+									  <option value="VA">Virginia</option>
+									  <option value="WA">Washington</option>
+									  <option value="WV">West Virginia</option>
+									  <option value="WI">Wisconsin</option>
+									  <option value="WY">Wyoming</option>
+								</select></br>
+								<label >Zip:</label></br>
+								<input id="zip" name="zip" type="text" /></br>
+								<label >Phone:</label></br>
+								<input id="phone" name="phone" type="text" /></br>
+								<label >Email:</label></br>
+								<input id="email" name="email" type="text" /></br>
+								<input class="next" id="next1" type="button" value="Next" /></br>
+							</div> <!--End of personal div-->
+							<h3 id="additionalDiv">Additional Information</h3>
+							<div id="additional">
+								<label>Position Applying for:</label></br>
+								<select id="position" name="position">
+									  <option value="isAnalyst">Information Systems Analyst</option>
+									  <option value="softwareEngineer">Software Engineer</option>
+									  <option value="dba">Database Administrator</option>
+									  <option value="gDesigner">Graphic Designer</option>
+									  <option value="pm">Project Manager</option>
+								</select></br>
+								<label>Date Available:</label></br>
+								<input type="text" id="availableDate" name="availableDate" /></br>
+								<label>Desired Salary:</label></br>
+								<input id="salary" name="salary" type="text" /></br>
+								<label>Are you a citizen of the United States?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="citizen" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad" value="0" name="citizen" type="radio"/></br>
+								<div class="optional" id="authWork">
+									<label>Are you a authorized to work in the United States?</label></br>
+									<label class="formRadLbl">Yes</label>
+									<input class="formRad" value="1" name="authorizedWork" type="radio"/></br>
+									<label class="formRadLbl">No</label>
+									<input class="formRad" value="0" name="authorizedWork" type="radio"/></br>
+								</div><!--End of authWork div-->
+								<label>Have you ever worked for this company?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="previousEmp" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad" value="0" name="previousEmp" type="radio"/></br>
+								<div class="optional" id="previousEmpDates">
+									<label for="previousEmpFrom">Start Date:</label></br>
+									<input class="ignore" type="text" id="previousEmpFrom" name="previousEmpFrom"/></br>
+									<label for="previousEmpTo">End Date:</label></br>
+									<input class="ignore" type="text" id="previousEmpTo" name="previousEmpTo"/></br>
+								</div><!--End of previousEmpDates div-->
+								<label>Have you ever been convicted of a felony?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="felon" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad" value="0" name="felon" type="radio"/></br>
+								<div class="optional" id="felony">
+									<label >Please explain:</label></br>
+									<textarea class="ignore" id="felonExp" name="felonExp" rows="10" cols="75" title="Please explain" ></textarea></br>
+								</div><!--End of felony div -->
+								<input class="back" id="back1" type="button" value="Back" />
+								<input class="next" id="next2" type="button" value="Next" /></br>
+							</div> <!--End of additional div-->
+							<h3 id="referencesDiv">References</h3>
+							<div id="references">
+								<fieldset>
+									<legend>First Reference</legend>
+									<label>Full Name:</label></br>
+									<input id="r1Name" name="r1Name" type="text" /></br>
+									<label>Relationship:</label></br>
+									<input id="r1Relationship" name="r1Relationship" type="text" /></br>
+									<label>Company:</label></br>
+									<input id="r1Company" name="r1Company" type="text" /></br>
+									<label>Phone:</label></br>
+									<input id="r1Phone" name="r1Phone" type="text" /></br>
+									<label>Address:</label></br>
+									<input id="r1Address" name="r1Address" type="text" /></br>
+								</fieldset>
+								<fieldset>
+									<legend>Second Reference</legend>
+									<label>Full Name:</label></br>
+									<input id="r2Name" name="r2Name" type="text" /></br>
+									<label>Relationship:</label></br>
+									<input id="r2Relationship" name="r2Relationship" type="text" /></br>
+									<label>Company:</label></br>
+									<input id="r2Company" name="r2Company" type="text" /></br>
+									<label>Phone:</label></br>
+									<input id="r2Phone" name="r2Phone" type="text" /></br>
+									<label>Address:</label></br>
+									<input id="r2Address" name="r2Address" type="text" /></br>
+								</fieldset>
+								<fieldset>
+									<legend>Second Reference</legend>
+									<label>Full Name:</label></br>
+									<input id="r3Name" name="r3Name" type="text" /></br>
+									<label>Relationship:</label></br>
+									<input id="r3Relationship" name="r3Relationship" type="text" /></br>
+									<label>Company:</label></br>
+									<input id="r3Company" name="r3Company" type="text" /></br>
+									<label>Phone:</label></br>
+									<input id="r3Phone" name="r3Phone" type="text" /></br>
+									<label>Address:</label></br>
+									<input id="r3Address" name="r3Address" type="text" /></br>
+								</fieldset>
+								<input class="back" id="back2" type="button" value="Back" />
+								<input class="next" id="next3" type="button" value="Next" /></br>
+							</div> <!--End of references div-->
+						</div> <!--End of piAccordion div-->
+					</div> <!--End of piTab div-->
+					<div id="qTab">
+						<div id="qAccordion" class="accordionGroup">
+							<h3>Education</h3>
+							<div id="education">
+								<label>Do you have a high shool diploma or an equivalent diploma?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="hsGrad" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad"value="0" name="hsGrad" type="radio"/></br>
+								<div class="optional" id="hsInfo">
+									<label>High School:</label></br>
+									<input class="ignore" id="hs" name="hs" type="text" /></br>
+									<label>Address:</label></br>
+									<input class="ignore" id="hsAddress" name="hsAddress" type="text" /></br>
+									<label for="hsStartDate">Start Date:</label></br>
+									<input class="ignore" type="text" id="hsStartDate" name="hsStartDate"/></br>
+									<label for="hsEndDate">End Date:</label></br>
+									<input class="ignore" type="text" id="hsEndDate" name="hsEndDate"/></br>
+									<label>High School Diploma:</label></br>
+									<input class="ignore" id="diploma" name="diploma" type="text" /></br>
+								</div>
+								<label>Do you have a college degree?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="collegeGrad" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad" value="0" name="collegeGrad" type="radio"/></br>
+								<div class="optional" id="collegeInfo">
+									<label>College or University:</label></br>
+									<input class="ignore" id="collegeName" name="collegeName" type="text" /></br>
+									<label>Address:</label></br>
+									<input class="ignore" id="collegeAddress" name="collegeAddress" type="text" /></br>
+									<label for="collegeStartDate">Start Date:</label></br>
+									<input class="ignore" type="text" id="collegeStartDate" name="collegeStartDate"/></br>
+									<label for="collegeEndDate">End Date:</label></br>
+									<input class="ignore" type="text" id="collegeEndDate" name="collegeEndDate"/></br>
+									<label>College Degree:</label></br>
+									<input class="ignore" id="degree" name="degree" type="text" /></br>
+								</div> <!--End of collegeInfo div-->
+								<input class="back" id="back3" type="button" value="Back" />
+								<input class="next" id="next4" type="button" value="Next" /></br>
+							</div> <!--End of education div-->
+							<h3>Previous Employement</h3>
+							<div id="employment">
+								<label>Do you have any employment history?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="empHis" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad" value="0" name="empHis" type="radio"/></br>
+								<div class="optional" id="empInfo">
+									<label>Company:</label></br>
+									<input class="ignore" id="company1" name="company1" type="text" /></br>
+									<label>Phone:</label></br>
+									<input class="ignore" id="company1Phone" name="company1Phone" type="text" /></br>
+									<label>Address:</label></br>
+									<input class="ignore" id="companyAddress1" name="companyAddress1" type="text" /></br>
+									<label>Supervisor:</label></br>
+									<input class="ignore" id="companySupervisor1" name="companySupervisor1" type="text" /></br>
+									<label>Title:</label></br>
+									<input class="ignore" id="companyTitle1" name="companyTitle1" type="text" /></br>
+									<label>Starting Salary:</label></br>
+									<input class="ignore" id="companySartSalary1" name="companyStartSalary1" type="text" /></br>
+									<label>Ending Salary:</label></br>
+									<input class="ignore" id="companyEndSalary1" name="companyEndSalary1" type="text" /></br>
+									<label>Responsibilities:</label></br>
+									<textarea class="ignore" id="resp1" name="resp1" rows="5" cols="75" title="Responsibilities" ></textarea></br>
+									<label for="c1StartDate">Start Date:</label></br>
+									<input class="ignore" type="text" id="c1StartDate" name="c1StartDate"/></br>
+									<label for="c1EndDate">End Date:</label></br>
+									<input class="ignore" type="text" id="c1EndDate" name="c1EndDate"/></br>
+									<label>Reasons for leaving:</label></br>
+									<textarea class="ignore" id="leaving1" name="leaving1" rows="5" cols="75" title="Reasons for leaving" ></textarea></br>
+									<label>May we contact your previous supervisor for a reference?</label></br>
+									<label class="formRadLbl">Yes</label>
+									<input class="formRad" value="1" name="contPrevSup1" type="radio"/></br>
+									<label class="formRadLbl">No</label>
+									<input class="formRad" value="0" name="contPrevSup1" type="radio"/></br>
+									<label>Do you have additional employment history you would like to add?</label></br>
+									<label class="formRadLbl">Yes</label>
+									<input class="formRad" value="1" name="additEmp" type="radio"/></br>
+									<label class="formRadLbl">No</label>
+									<input class="formRad" value="0" name="additEmp" type="radio"/></br>
+									<div class="optional" id="additEmpInfo">
+										<label>Company:</label></br>
+										<input class="ignore" id="company2" name="company2" type="text" /></br>
+										<label>Phone:</label></br>
+										<input class="ignore" id="company2Phone" name="company2Phone" type="text" /></br>
+										<label>Address:</label></br>
+										<input class="ignore" id="companyAddress2" name="companyAddress2" type="text" /></br>
+										<label>Supervisor:</label></br>
+										<input class="ignore" id="companySupervisor2" name="companySupervisor2" type="text" /></br>
+										<label>Title:</label></br>
+										<input class="ignore" id="companyTitle2" name="companyTitle2" type="text" /></br>
+										<label>Starting Salary:</label></br>
+										<input class="ignore" id="companySartSalary2" name="companyStartSalary2" type="text" /></br>
+										<label>Ending Salary:</label></br>
+										<input class="ignore" id="companyEndSalary2" name="companyEndSalary2" type="text" /></br>
+										<label>Responsibilities:</label></br>
+										<textarea class="ignore" id="resp2" name="resp2" rows="5" cols="75" title="Responsibilities" ></textarea></br>
+										<label for="c2StartDate">Start Date:</label></br>
+										<input class="ignore" type="text" id="c2StartDate" name="c2StartDate"/></br>
+										<label for="c2EndDate">End Date:</label></br>
+										<input class="ignore" type="text" id="c2EndDate" name="c2EndDate"/></br>
+										<label>Reasons for leaving:</label></br>
+										<textarea class="ignore" id="leaving2" name="leaving2" rows="5" cols="75" title="Reasons for leaving" ></textarea></br>
+										<label>May we contact your previous supervisor for a reference?</label></br>
+										<label class="formRadLbl">Yes</label>
+										<input class="formRad" value="1" name="contPrevSup2" type="radio"/></br>
+										<label class="formRadLbl">No</label>
+										<input class="formRad" value="0" name="contPrevSup2" type="radio"/></br>
+									</div> <!--End of additEmpInfo div-->
+								</div> <!--End of empInfo div-->
+								<input class="back" id="back4" type="button" value="Back" />
+								<input class="next" id="next5" type="button" value="Next" /></br>
+							</div> <!--End of employment div-->
+							<h3>Military Service</h3>
+							<div id="military">
+								<label>Have you ever been enrolled in the military?</label></br>
+								<label class="formRadLbl">Yes</label>
+								<input class="formRad" value="1" name="militaryEnrol" type="radio"/></br>
+								<label class="formRadLbl">No</label>
+								<input class="formRad" value="0" name="militaryEnrol" type="radio"/></br>
+								<div class="optional" id="militaryInfo">
+									<label>Branch:</label></br>
+									<input class="ignore" id="milBranch" name="milBranch" type="text" /></br>
+									<label>Rank at Discharge:</label></br>
+									<input class="ignore" id="milRank" name="milRank" type="text" /></br>
+									<label for="milStartDate">Start Date:</label></br>
+									<input class="ignore" type="text" id="milStartDate" name="milStartDate"/></br>
+									<label for="milEndDate">End Date:</label></br>
+									<input class="ignore" type="text" id="milEndDate" name="milEndDate"/></br>
+									<label>Type of Discharge:</label></br>
+									<input class="ignore" id="milDischarge" name="milDischarge" type="text" /></br>
+								</div><!--End of militaryInfo div-->
+								<input class="back" id="back5" type="button" value="Back" />
+								<input class="next" id="next6" type="button" value="Next" /></br>
+							</div> <!--End of military div-->
+						</div> <!--End of qAccordion div-->
+					</div> <!--End of qTab div-->
+					<div id="dsTab">
+						<p>I certify that my answers are true and complete to the best of my knowledge.</p>
+						<p>if this application leads to employment, I understand that false or misleading information in my application or interview may result in my release.</p>
+						<label>Digital Signature</label></br>
+						<input id="signature" name="signature" type="text" /></br>
+						<label>Date:</label></br>
+						<input type="text" id="signatureDate" name="signatureDate"/></br>
+						<input class="back" id="back6" type="button" value="Back" />
+						<input id="formSubmit" type="submit" value="Submit Application"/></br>
+						<p id="summary"></p>
+					</div> <!--End of dsTab div-->
+				</div> <!--End of tabs div-->
+			</form>
+		</div> <!--End of content div-->
+<!--------------------------------End of page content area-------------------------------->
+		<div id="footer" class="ui-widget-header ui-corner-all">
+			<p>123 Fake Street, Cedar Rapids Iowa</p>
+		</div>	<!--End of footer div-->
+	</div> <!--End of page div-->
+</body>
+</html>
